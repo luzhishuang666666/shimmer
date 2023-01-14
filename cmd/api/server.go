@@ -18,15 +18,15 @@ import (
 	"github.com/go-admin-team/go-admin-core/sdk/runtime"
 	"github.com/spf13/cobra"
 
-	"go-admin/app/admin/models"
-	"go-admin/app/admin/router"
-	"go-admin/app/jobs"
-	"go-admin/common/database"
-	"go-admin/common/global"
-	common "go-admin/common/middleware"
-	"go-admin/common/middleware/handler"
-	"go-admin/common/storage"
-	ext "go-admin/config"
+	"shimmer/app/admin/models"
+	"shimmer/app/admin/router"
+	"shimmer/app/jobs"
+	"shimmer/common/database"
+	"shimmer/common/global"
+	common "shimmer/common/middleware"
+	"shimmer/common/middleware/handler"
+	"shimmer/common/storage"
+	ext "shimmer/config"
 )
 
 var (
@@ -35,7 +35,7 @@ var (
 	StartCmd  = &cobra.Command{
 		Use:          "server",
 		Short:        "Start API server",
-		Example:      "go-admin server -c config/settings.yml",
+		Example:      "XXX server -c config/settings.yml",
 		SilenceUsage: true,
 		PreRun: func(cmd *cobra.Command, args []string) {
 			setup()
@@ -126,7 +126,6 @@ func run() error {
 			}
 		}
 	}()
-	fmt.Println(pkg.Red(string(global.LogoContent)))
 	tip()
 	fmt.Println(pkg.Green("Server run at:"))
 	fmt.Printf("-  Local:   http://localhost:%d/ \r\n", config.ApplicationConfig.Port)
@@ -155,7 +154,7 @@ func run() error {
 var Router runtime.Router
 
 func tip() {
-	usageStr := `欢迎使用 ` + pkg.Green(`go-admin `+global.Version) + ` 可以使用 ` + pkg.Red(`-h`) + ` 查看命令`
+	usageStr := `欢迎使用 微光`
 	fmt.Printf("%s \n\n", usageStr)
 }
 

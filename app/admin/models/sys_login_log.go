@@ -9,7 +9,7 @@ import (
 	"github.com/go-admin-team/go-admin-core/sdk"
 	"github.com/go-admin-team/go-admin-core/storage"
 
-	"go-admin/common/models"
+	"shimmer/common/models"
 )
 
 type SysLoginLog struct {

@@ -1,7 +1,7 @@
 package models
 
 import (
-	"go-admin/common/models"
+	"shimmer/common/models"
 )
 
 type SysDictData struct {

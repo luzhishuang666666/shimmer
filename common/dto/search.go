@@ -2,8 +2,8 @@ package dto
 
 import (
 	"github.com/go-admin-team/go-admin-core/tools/search"
-	"go-admin/common/global"
 	"gorm.io/gorm"
+	"shimmer/common/global"
 )
 
 type GeneralDelDto struct {

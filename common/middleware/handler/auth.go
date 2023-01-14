@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"go-admin/app/admin/models"
-	"go-admin/common"
 	"net/http"
+	"shimmer/app/admin/models"
+	"shimmer/common"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-admin-team/go-admin-core/sdk"
@@ -15,7 +15,7 @@ import (
 	"github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth/user"
 	"github.com/go-admin-team/go-admin-core/sdk/pkg/response"
 	"github.com/mssola/user_agent"
-	"go-admin/common/global"
+	"shimmer/common/global"
 )
 
 func PayloadFunc(data interface{}) jwt.MapClaims {

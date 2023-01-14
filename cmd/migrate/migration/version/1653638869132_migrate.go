@@ -1,13 +1,13 @@
 package version
 
 import (
-	"go-admin/cmd/migrate/migration/models"
-	common "go-admin/common/models"
 	"gorm.io/gorm"
 	"runtime"
+	"shimmer/cmd/migrate/migration/models"
+	common "shimmer/common/models"
 	"strconv"
 
-	"go-admin/cmd/migrate/migration"
+	"shimmer/cmd/migrate/migration"
 )
 
 func init() {

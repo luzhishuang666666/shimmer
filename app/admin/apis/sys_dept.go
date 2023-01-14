@@ -7,10 +7,10 @@ import (
 	"github.com/go-admin-team/go-admin-core/sdk/pkg"
 	"github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth/user"
 	_ "github.com/go-admin-team/go-admin-core/sdk/pkg/response"
-	"go-admin/app/admin/models"
+	"shimmer/app/admin/models"
 
-	"go-admin/app/admin/service"
-	"go-admin/app/admin/service/dto"
+	"shimmer/app/admin/service"
+	"shimmer/app/admin/service/dto"
 )
 
 type SysDept struct {
@@ -187,7 +187,7 @@ func (e SysDept) Get2Tree(c *gin.Context) {
 	req := dto.SysDeptGetPageReq{}
 	err := e.MakeContext(c).
 		MakeOrm().
-		Bind(&req,binding.Form).
+		Bind(&req, binding.Form).
 		MakeService(&s.Service).
 		Errors
 	if err != nil {

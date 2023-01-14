@@ -4,27 +4,24 @@ import (
 	"errors"
 	"fmt"
 	"github.com/go-admin-team/go-admin-core/sdk/pkg"
-	"go-admin/cmd/app"
-	"go-admin/common/global"
-	"os"
-
 	"github.com/spf13/cobra"
+	"os"
+	"shimmer/cmd/app"
 
-	"go-admin/cmd/api"
-	"go-admin/cmd/config"
-	"go-admin/cmd/migrate"
-	"go-admin/cmd/version"
+	"shimmer/cmd/api"
+	"shimmer/cmd/config"
+	"shimmer/cmd/migrate"
+	"shimmer/cmd/version"
 )
 
 var rootCmd = &cobra.Command{
-	Use:          "go-admin",
-	Short:        "go-admin",
+	Use:          "shimmer",
+	Short:        "shimmer",
 	SilenceUsage: true,
-	Long:         `go-admin`,
+	Long:         `shimmer`,
 	Args: func(cmd *cobra.Command, args []string) error {
 		if len(args) < 1 {
-			tip()
-			return errors.New(pkg.Red("requires at least one arg"))
+			return errors.New(pkg.Red("启动失敗"))
 		}
 		return nil
 	},
@@ -35,10 +32,8 @@ var rootCmd = &cobra.Command{
 }
 
 func tip() {
-	usageStr := `欢迎使用 ` + pkg.Green(`go-admin `+global.Version) + ` 可以使用 ` + pkg.Red(`-h`) + ` 查看命令`
-	usageStr1 := `也可以参考 https://doc.go-admin.dev/guide/ksks 的相关内容`
+	usageStr := `欢迎使用 微光`
 	fmt.Printf("%s\n", usageStr)
-	fmt.Printf("%s\n", usageStr1)
 }
 
 func init() {

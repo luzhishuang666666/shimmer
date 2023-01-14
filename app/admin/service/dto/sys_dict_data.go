@@ -1,9 +1,9 @@
 package dto
 
 import (
-	"go-admin/app/admin/models"
-	"go-admin/common/dto"
-	common "go-admin/common/models"
+	"shimmer/app/admin/models"
+	"shimmer/common/dto"
+	common "shimmer/common/models"
 )
 
 type SysDictDataGetPageReq struct {

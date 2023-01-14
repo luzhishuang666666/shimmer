@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"go-admin/common/models"
 	"gorm.io/gorm"
+	"shimmer/common/models"
 )
 
 type SysUser struct {

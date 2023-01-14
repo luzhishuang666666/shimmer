@@ -3,7 +3,7 @@ package dto
 import (
 	"time"
 
-	"go-admin/common/dto"
+	"shimmer/common/dto"
 )
 
 type SysLoginLogGetPageReq struct {

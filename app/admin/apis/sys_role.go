@@ -2,20 +2,20 @@ package apis
 
 import (
 	"fmt"
-	"go-admin/common/global"
 	"net/http"
+	"shimmer/common/global"
 
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-admin-team/go-admin-core/sdk"
-	"go-admin/app/admin/models"
+	"shimmer/app/admin/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-admin-team/go-admin-core/sdk/api"
 	"github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth/user"
 	_ "github.com/go-admin-team/go-admin-core/sdk/pkg/response"
 
-	"go-admin/app/admin/service"
-	"go-admin/app/admin/service/dto"
+	"shimmer/app/admin/service"
+	"shimmer/app/admin/service/dto"
 )
 
 type SysRole struct {

@@ -9,7 +9,7 @@ import (
 	_ "github.com/go-admin-team/go-admin-core/sdk/pkg/response"
 	"gorm.io/gorm"
 
-	"go-admin/app/other/models/tools"
+	"shimmer/app/other/models/tools"
 )
 
 type SysTable struct {
@@ -79,7 +79,7 @@ func (e SysTable) Get(c *gin.Context) {
 
 	var data tools.SysTables
 	data.TableId, _ = pkg.StringToInt(c.Param("tableId"))
-	result, err := data.Get(db,true)
+	result, err := data.Get(db, true)
 	if err != nil {
 		log.Errorf("Get error, %s", err.Error())
 		e.Error(500, err, "")
@@ -106,7 +106,7 @@ func (e SysTable) GetSysTablesInfo(c *gin.Context) {
 	if c.Request.FormValue("tableName") != "" {
 		data.TBName = c.Request.FormValue("tableName")
 	}
-	result, err := data.Get(db,true)
+	result, err := data.Get(db, true)
 	if err != nil {
 		log.Errorf("Get error, %s", err.Error())
 		e.Error(500, err, "抱歉未找到相关信息")

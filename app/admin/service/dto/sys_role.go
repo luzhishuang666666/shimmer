@@ -1,10 +1,10 @@
 package dto
 
 import (
-	"go-admin/app/admin/models"
-	common "go-admin/common/models"
+	"shimmer/app/admin/models"
+	common "shimmer/common/models"
 
-	"go-admin/common/dto"
+	"shimmer/common/dto"
 )
 
 type SysRoleGetPageReq struct {

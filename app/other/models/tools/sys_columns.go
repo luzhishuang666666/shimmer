@@ -1,8 +1,8 @@
 package tools
 
 import (
-	"go-admin/app/admin/models"
 	"gorm.io/gorm"
+	"shimmer/app/admin/models"
 )
 
 type SysColumns struct {

@@ -1,4 +1,4 @@
-module go-admin
+module shimmer
 
 go 1.18
 

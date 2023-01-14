@@ -3,9 +3,9 @@ package dto
 import (
 	"time"
 
-	"go-admin/app/admin/models"
-	"go-admin/common/dto"
-	common "go-admin/common/models"
+	"shimmer/app/admin/models"
+	"shimmer/common/dto"
+	common "shimmer/common/models"
 )
 
 const (

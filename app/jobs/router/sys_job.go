@@ -3,11 +3,11 @@ package router
 import (
 	"github.com/gin-gonic/gin"
 	jwt "github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth"
-	"go-admin/app/jobs/apis"
-	models2 "go-admin/app/jobs/models"
-	dto2 "go-admin/app/jobs/service/dto"
-	"go-admin/common/actions"
-	"go-admin/common/middleware"
+	"shimmer/app/jobs/apis"
+	models2 "shimmer/app/jobs/models"
+	dto2 "shimmer/app/jobs/service/dto"
+	"shimmer/common/actions"
+	"shimmer/common/middleware"
 )
 
 func init() {

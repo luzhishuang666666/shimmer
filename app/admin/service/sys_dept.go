@@ -2,15 +2,15 @@ package service
 
 import (
 	"errors"
-	"go-admin/app/admin/models"
+	"shimmer/app/admin/models"
 
 	log "github.com/go-admin-team/go-admin-core/logger"
 	"github.com/go-admin-team/go-admin-core/sdk/pkg"
 
 	"gorm.io/gorm"
 
-	"go-admin/app/admin/service/dto"
-	cDto "go-admin/common/dto"
+	"shimmer/app/admin/service/dto"
+	cDto "shimmer/common/dto"
 
 	"github.com/go-admin-team/go-admin-core/sdk/service"
 )

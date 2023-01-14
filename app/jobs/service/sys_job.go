@@ -7,9 +7,9 @@ import (
 	"github.com/go-admin-team/go-admin-core/sdk/service"
 	"github.com/robfig/cron/v3"
 
-	"go-admin/app/jobs"
-	"go-admin/app/jobs/models"
-	"go-admin/common/dto"
+	"shimmer/app/jobs"
+	"shimmer/app/jobs/models"
+	"shimmer/common/dto"
 )
 
 type SysJob struct {

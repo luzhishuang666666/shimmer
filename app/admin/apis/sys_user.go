@@ -2,9 +2,9 @@ package apis
 
 import (
 	"github.com/gin-gonic/gin/binding"
-	"go-admin/app/admin/models"
 	"golang.org/x/crypto/bcrypt"
 	"net/http"
+	"shimmer/app/admin/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-admin-team/go-admin-core/sdk/api"
@@ -12,9 +12,9 @@ import (
 	_ "github.com/go-admin-team/go-admin-core/sdk/pkg/response"
 	"github.com/google/uuid"
 
-	"go-admin/app/admin/service"
-	"go-admin/app/admin/service/dto"
-	"go-admin/common/actions"
+	"shimmer/app/admin/service"
+	"shimmer/app/admin/service/dto"
+	"shimmer/common/actions"
 )
 
 type SysUser struct {

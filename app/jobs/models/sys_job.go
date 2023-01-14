@@ -1,8 +1,8 @@
 package models
 
 import (
-	"go-admin/common/models"
 	"gorm.io/gorm"
+	"shimmer/common/models"
 )
 
 type SysJob struct {

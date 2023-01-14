@@ -1,6 +1,6 @@
 package models
 
-import "go-admin/common/models"
+import "shimmer/common/models"
 
 type SysMenu struct {
 	MenuId     int       `json:"menuId" gorm:"primaryKey;autoIncrement"`

@@ -1,12 +1,12 @@
 package tools
 
 import (
-	common "go-admin/common/models"
+	common "shimmer/common/models"
 	"strings"
 
 	"gorm.io/gorm"
 
-	"go-admin/app/admin/models"
+	"shimmer/app/admin/models"
 )
 
 type SysTables struct {
