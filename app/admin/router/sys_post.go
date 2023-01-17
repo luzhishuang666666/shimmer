@@ -4,7 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 	jwt "github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth"
 	"shimmer/app/admin/apis"
-	"shimmer/common/middleware"
 )
 
 func init() {
@@ -14,7 +13,7 @@ func init() {
 // 需认证的路由代码
 func registerSyPostRouter(v1 *gin.RouterGroup, authMiddleware *jwt.GinJWTMiddleware) {
 	api := apis.SysPost{}
-	r := v1.Group("/post").Use(authMiddleware.MiddlewareFunc()).Use(middleware.AuthCheckRole())
+	r := v1.Group("/post")
 	{
 		r.GET("", api.GetPage)
 		r.GET("/:id", api.Get)

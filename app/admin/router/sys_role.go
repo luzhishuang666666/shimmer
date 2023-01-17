@@ -5,7 +5,6 @@ import (
 	jwt "github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth"
 
 	"shimmer/app/admin/apis"
-	"shimmer/common/middleware"
 )
 
 func init() {
@@ -15,7 +14,7 @@ func init() {
 // 需认证的路由代码
 func registerSysRoleRouter(v1 *gin.RouterGroup, authMiddleware *jwt.GinJWTMiddleware) {
 	api := apis.SysRole{}
-	r := v1.Group("/role").Use(authMiddleware.MiddlewareFunc()).Use(middleware.AuthCheckRole())
+	r := v1.Group("/role")
 	{
 		r.GET("", api.GetPage)
 		r.GET("/:id", api.Get)
@@ -23,7 +22,7 @@ func registerSysRoleRouter(v1 *gin.RouterGroup, authMiddleware *jwt.GinJWTMiddle
 		r.PUT("/:id", api.Update)
 		r.DELETE("", api.Delete)
 	}
-	r1 := v1.Group("").Use(authMiddleware.MiddlewareFunc())
+	r1 := v1.Group("")
 	{
 		r1.PUT("/role-status", api.Update2Status)
 		r1.PUT("/roledatascope", api.Update2DataScope)

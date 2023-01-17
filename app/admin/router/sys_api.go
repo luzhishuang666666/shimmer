@@ -5,7 +5,6 @@ import (
 	jwt "github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth"
 
 	"shimmer/app/admin/apis"
-	"shimmer/common/middleware"
 )
 
 func init() {
@@ -15,7 +14,7 @@ func init() {
 // registerSysApiRouter
 func registerSysApiRouter(v1 *gin.RouterGroup, authMiddleware *jwt.GinJWTMiddleware) {
 	api := apis.SysApi{}
-	r := v1.Group("/sys-api").Use(authMiddleware.MiddlewareFunc()).Use(middleware.AuthCheckRole())
+	r := v1.Group("/sys-api")
 	{
 		r.GET("", api.GetPage)
 		r.GET("/:id", api.Get)

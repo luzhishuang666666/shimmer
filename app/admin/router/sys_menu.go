@@ -4,7 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 	jwt "github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth"
 	"shimmer/app/admin/apis"
-	"shimmer/common/middleware"
 )
 
 func init() {
@@ -15,7 +14,7 @@ func init() {
 func registerSysMenuRouter(v1 *gin.RouterGroup, authMiddleware *jwt.GinJWTMiddleware) {
 	api := apis.SysMenu{}
 
-	r := v1.Group("/menu").Use(authMiddleware.MiddlewareFunc()).Use(middleware.AuthCheckRole())
+	r := v1.Group("/menu")
 	{
 		r.GET("", api.GetPage)
 		r.GET("/:id", api.Get)

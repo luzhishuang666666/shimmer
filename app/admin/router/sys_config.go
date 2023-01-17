@@ -1,11 +1,10 @@
 package router
 
 import (
-	"shimmer/app/admin/apis"
-	"shimmer/common/middleware"
-
 	"github.com/gin-gonic/gin"
 	jwt "github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth"
+	"shimmer/app/admin/apis"
+	"shimmer/common/middleware"
 )
 
 func init() {
@@ -24,7 +23,7 @@ func registerSysConfigRouter(v1 *gin.RouterGroup, authMiddleware *jwt.GinJWTMidd
 		r.DELETE("", api.Delete)
 	}
 
-	r1 := v1.Group("/configKey").Use(authMiddleware.MiddlewareFunc())
+	r1 := v1.Group("/configKey")
 	{
 		r1.GET("/:configKey", api.GetSysConfigByKEYForService)
 	}

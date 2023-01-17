@@ -4,7 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 	jwt "github.com/go-admin-team/go-admin-core/sdk/pkg/jwtauth"
 	"shimmer/app/admin/apis"
-	"shimmer/common/middleware"
 )
 
 func init() {
@@ -15,7 +14,7 @@ func init() {
 func registerSysDeptRouter(v1 *gin.RouterGroup, authMiddleware *jwt.GinJWTMiddleware) {
 	api := apis.SysDept{}
 
-	r := v1.Group("/dept").Use(authMiddleware.MiddlewareFunc()).Use(middleware.AuthCheckRole())
+	r := v1.Group("/dept")
 	{
 		r.GET("", api.GetPage)
 		r.GET("/:id", api.Get)
@@ -24,7 +23,7 @@ func registerSysDeptRouter(v1 *gin.RouterGroup, authMiddleware *jwt.GinJWTMiddle
 		r.DELETE("", api.Delete)
 	}
 
-	r1 := v1.Group("").Use(authMiddleware.MiddlewareFunc())
+	r1 := v1.Group("").Use()
 	{
 		r1.GET("/deptTree", api.Get2Tree)
 	}
